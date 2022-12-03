@@ -1,6 +1,7 @@
 package com.gjun.homework;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class PascalTriangleAnimated {
@@ -20,22 +21,30 @@ public class PascalTriangleAnimated {
 		int nubmer = 8;
 		List<List<Integer>> pascals = createPascalTriangle(nubmer);
 
+		Iterator<List<Integer>> it = pascals.iterator();
+		
+		while (it.hasNext()) {
+			System.out.println(it.next());
+		}
+		
+		/*
 		for (List<Integer> i : pascals) {
 			for (Integer i2 : i) {
 				System.out.print(i2 + " ");
 			}
 			System.out.println();
 		}
-
+		*/
+		
 	}
 
 	private static List<List<Integer>> createPascalTriangle(int numbers) {
-		
-		List<List<Integer>> pascals = new ArrayList<>();
+
+		List<List<Integer>> pascals = new ArrayList<List<Integer>>();
 
 		for (int i = 0; i < numbers; i++) {
 
-			List<Integer> ary = new ArrayList();
+			List<Integer> ary = new ArrayList<Integer>();
 
 			ary.add(1);
 
