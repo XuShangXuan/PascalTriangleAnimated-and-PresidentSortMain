@@ -37,7 +37,7 @@ public class PascalTriangleAnimated {
 
 			List<Integer> ary = new ArrayList();
 
-			ary.add(0, 1);
+			ary.add(1);
 
 			for (int j = 1; j < i; j++) {
 
